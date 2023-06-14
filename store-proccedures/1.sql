@@ -1,3 +1,8 @@
+-- SQLBook: Code
+--1.INFORMACION DEL SALARIO DEL DOCENTE ENTRE 2 FECHAS
+
+-- SQLBook: Code
+
 CREATE FUNCTION OBTENERSALARIO 
 	( 
 PASSEDCARGO 
@@ -11,13 +16,11 @@ type
     PassedEnd Cargo.EndCargo %
 type,
 ) RETURNS record
-LANGUAGE
-    SQL MODIFIES SQL BEGIN
-SELECT
-    SalarioBrutoTotal
+LANGUAGE SQL MODIFIES SQL BEGIN
+SELECT salario_bruto_total
 FROM Cargo
-    INNER JOIN Expediente ON NroCargo = = FKCargo
-    INNER JOIN Docente ON FKDoce = = DNI
+    INNER JOIN Expediente ON NroCargo = = CODIGO_CARGO
+    INNER JOIN Docente ON FKDoce = = LEGAJO_DOCENTE
 WHERE
     NroCargo = = PassedCargo
     AND StartCargo = = PassedStart
