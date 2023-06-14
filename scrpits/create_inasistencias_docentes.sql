@@ -1,4 +1,4 @@
-USE AGMER GO
+USE jirho_bda GO
 /****** Object:  Table dbo.INASISTENCIAS_DOCENTES    Script Date: 2/6/2023 18:03:09 ******/
 SET
 	ANSI_NULLS ON GO

@@ -1,4 +1,4 @@
-USE GO
+USE jirho_bda GO
 /****** Object:  Table [dbo].[ESCUELA]    Script Date: 30/5/2023 11:09:39 ******/
 SET
 	ANSI_NULLS ON GO
