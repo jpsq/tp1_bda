@@ -1,0 +1,22 @@
+INSERT INTO CONSTANCIA (codigo_constancia, descripcion, fecha_emision)
+VALUES
+  (1, 'Constancia 1', '2023-01-05'),
+  (2, 'Constancia 2', '2023-02-10'),
+  (3, 'Constancia 3', '2023-03-15'),
+  (4, 'Constancia 4', '2023-04-20'),
+  (5, 'Constancia 5', '2023-05-25'),
+  (6, 'Constancia 6', '2023-06-30'),
+  (7, 'Constancia 7', '2023-07-08'),
+  (8, 'Constancia 8', '2023-08-16'),
+  (9, 'Constancia 9', '2023-09-24'),
+  (10, 'Constancia 10', '2023-10-02'),
+  (11, 'Constancia 11', '2023-11-10'),
+  (12, 'Constancia 12', '2023-12-18'),
+  (13, 'Constancia 13', '2023-02-01'),
+  (14, 'Constancia 14', '2023-03-08'),
+  (15, 'Constancia 15', '2023-04-15'),
+  (16, 'Constancia 16', '2023-05-22'),
+  (17, 'Constancia 17', '2023-06-29'),
+  (18, 'Constancia 18', '2023-08-06'),
+  (19, 'Constancia 19', '2023-09-13'),
+  (20, 'Constancia 20', '2023-10-20');
