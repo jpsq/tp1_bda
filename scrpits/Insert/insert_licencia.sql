@@ -1,0 +1,22 @@
+INSERT INTO licencia (codigo_licencia, dni_docente, codigo_constancia, tipo)
+VALUES
+  (1, 2, 1, 'Enfermedad'),
+  (2, 14, 2, 'Vacaciones'),
+  (3, 4, 3, 'Maternidad'),
+  (4, 1, 4, 'Enfermedad'),
+  (5, 5, 5, 'Vacaciones'),
+  (6, 9, 6, 'Enfermedad'),
+  (7, 7, 7, 'Vacaciones'),
+  (8, 3, 8, 'Maternidad'),
+  (9, 12, 9, 'Enfermedad'),
+  (10, 13, 10, 'Vacaciones'),
+  (11, 29, 11, 'Enfermedad'),
+  (12, 30, 12, 'Vacaciones'),
+  (13, 41, 13, 'Maternidad'),
+  (14, 22, 14, 'Enfermedad'),
+  (15, 38, 15, 'Vacaciones'),
+  (16, 23, 16, 'Enfermedad'),
+  (17, 33, 17, 'Vacaciones'),
+  (18, 39, 18, 'Maternidad'),
+  (19, 18, 19, 'Enfermedad'),
+  (20, 45, 20, 'Vacaciones');
