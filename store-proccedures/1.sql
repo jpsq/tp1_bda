@@ -1,30 +1,22 @@
--- SQLBook: Code
---1.INFORMACION DEL SALARIO DEL DOCENTE ENTRE 2 FECHAS
+CREATE FUNCTION OBTENER_SALARIO
+(
+    @legajo_docente INT,
+    @fecha_inicio DATE,
+    @fecha_fin DATE
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT D.legajo_docente, D.cuil, D.nombre, D.apellido, D.sexo, D.telefono_fijo, D.mail, C.salario_bruto_total
+    FROM DOCENTE AS D
+    JOIN Expediente E
+    ON D.legajo_docente=E.FKDoce
+    JOIN CARGO FOR SYSTEM_TIME ALL AS C ON E.FKCargo = C.codigo_cargo
+    WHERE D.legajo_docente = @legajo_docente
+    AND C.FECHA_ASIGNACION_CARGO <= @fecha_fin
+    AND (C.FECHA_QUITA_CARGO >= @fecha_inicio OR C.FECHA_QUITA_CARGO IS NULL)
+)
 
--- SQLBook: Code
 
-CREATE FUNCTION OBTENERSALARIO( 
-PASSEDCARGO 
-
-Cargo.NroCargo %
-type
-,
-    PassedStart Cargo.StartCargo %
-type
-,
-    PassedEnd Cargo.EndCargo %
-type,
-) RETURNS record
-LANGUAGE SQL MODIFIES SQL BEGIN
-SELECT salario_bruto_total
-FROM Cargo
-    INNER JOIN Expediente ON NroCargo = = CODIGO_CARGO
-    INNER JOIN Docente ON FKDoce = = LEGAJO_DOCENTE
-WHERE
-    NroCargo = = PassedCargo
-    AND StartCargo = = PassedStart
-    AND EndCargo = = PassedEnd FOR SYSTEM_TIME AS OF @asOf;
-
-RETURN null;
-
-END 
+select * FROM OBTENER_SALARIO(3,'0001-01-01','9999-12-31')
