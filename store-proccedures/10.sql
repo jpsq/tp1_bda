@@ -13,10 +13,10 @@ BEGIN
 	SELECT FK_Escuela, year(Fecha_Falta) AS Año, Docente, count(Fecha_Falta) AS Total_Ausencias
 	FROM 
 		(SELECT DISTINCT FK_Docente AS Docente, FK_Escuela, Start_Expediente, End_Expediente 
-		FROM EXPEDIENTE) AS T1
+		FROM EXPEDIENTE FOR SYSTEM_TIME ALL) AS T1
 	INNER JOIN 
 		(SELECT DISTINCT FK_Docente, Fecha_Falta
-		FROM INASISTENCIA INNER JOIN INASISTENCIA_X_DOCENTE 
+		FROM INASISTENCIA FOR SYSTEM_TIME ALL INNER JOIN INASISTENCIA_X_DOCENTE 
 		ON FK_Inasistencia = Nro_Inasistencia) AS T2
 	ON Docente = FK_Docente
 	WHERE Fecha_Falta BETWEEN Start_Expediente AND End_Expediente
